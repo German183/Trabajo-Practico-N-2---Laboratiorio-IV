@@ -1,0 +1,30 @@
+header{
+     padding: 10px 0;
+     font-size: 24px;
+}
+
+body {
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     background: #f38080;
+}
+
+.exercise {
+     margin-top: 200px;
+     background-color: #f5caca;
+     border: 1px solid #000000;
+     border-radius: 10px;
+     padding: 50px;
+     width: 600px;
+     margin: 5px;
+     text-align: justify;
+}
+
+.inputs {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}

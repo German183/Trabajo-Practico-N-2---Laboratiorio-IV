@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header id="title">
+          <h1>Trabajo Práctico N°2</h1>
+     </header>
+     
+     <section id="exercises">
+          <div class="exercise">
+               <h2>Ejercicio 1</h2>
+               <p>Crea un objeto que represente a una persona con propiedades como nombre, edad y profesión. Luego,muestra estas propiedades utilizando alert.</p>
+               <div class="inputs">
+                    <input type="text" id="name" placeholder="Nombre">
+                    <input type="text" id="age" placeholder="Edad">
+                    <input type="text" id="profession" placeholder="Profesión">
+                    <button onclick="showPerson()">Confirmar</button>
+               </div>
+          </div>
+
+          <div class="exercise">
+               <h2>Ejercicio 2</h2>
+               <p>Crea una clase llamada "Libro" que tenga propiedades como título, autor y año de publicación. Crea un método que muestre la información del libro en un formato legible y utiliza prompts para obtener la información del usuario. Luego, crea una instancia de la clase y muestra la información utilizando alert.</p>
+               <div class="inputs">
+                    <button onclick="showBook()">Comenzar</button>
+               </div>
+          </div>
+
+          <div class="exercise">
+               <h2>Ejercicio 3</h2>
+               <p>Utiliza la clase generada en el punto 1 añadiendo los siguientes metodos:<br><br>
+                    constructor(nombre, edad, profesión): Inicializa el nombre,la edad de la persona y su profesión.<br><br>
+                    saludar(): Muestra un saludo en un alert que incluya el nombre y la edad de la persona.<br><br>
+                    Luego, crea una instancia de la clase Persona utilizando los datos proporcionados por el usuario a través de prompts y muestra el saludo utilizando el método saludar().
+               </p>
+               <div class="inputs">
+                    <button onclick="personalizatedPresentation()">Comenzar</button>
+               </div>
+          </div>
+     </section>
+     <script src="script.js"></script>
+</body>
+</html>

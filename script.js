@@ -1,0 +1,56 @@
+class Person {
+     constructor(name, age, profession){
+          this.name = name;
+          this.age = age;
+          this.profession = profession;
+     }
+
+     saludar(){
+          alert("Hola, me llamo " + this.name + " y tengo " + this.age + " años.");
+     }
+
+     toString(){
+          return "Nombre: " + this.name + "\nEdad: " + this.age + "\nProfesión: " + this.profession;
+     }
+}
+
+class Book{
+     constructor(title, author, year){
+          this.title = title;
+          this.author = author;
+          this.year = year;
+     }
+
+     toString(){
+          return "Título: " + this.title + "\nAutor: " + this.author + "\nAño: " + this.year;
+     }
+}
+
+//#region exercise 1
+function showPerson(){
+     let name = document.getElementById("name").value;
+     let age = document.getElementById("age").value;
+     let profession = document.getElementById("profession").value;
+     
+     let person = new Person(name, age, profession);
+
+     alert("USUARIO REGISTRADO:\n" + person.toString());
+}
+//#endregion
+
+//#region exercise 2
+function showBook(){
+     let book = new Book(prompt("Ingrese el título del libro"), prompt("Ingrese el autor del libro"), prompt("Ingrese el año del libro"));
+
+     alert("LIBRO REGISTRADO:\n" + book.toString());
+}
+//#endregion
+
+//#region exercise 3
+function personalizatedPresentation(){
+     let person = new Person(prompt("Ingrese su nombre"), prompt("Ingrese su edad"));
+
+     person.saludar();
+}
+//#endregion
+
