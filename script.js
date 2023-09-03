@@ -26,6 +26,28 @@ class Book{
      }
 }
 
+class SuperHero{
+     constructor(nombre, poder){
+          this.nombre = nombre;
+          this.poder = poder;
+     }
+
+     mySelf(){
+          alert("Hola, soy " + this.nombre + " y mi poder es " + this.poder);
+     }
+}
+
+class Villian extends SuperHero{
+     constructor(nombre, poder, plan){
+          super(nombre, poder);
+          this.plan = plan;
+     }
+
+     threaten(){
+          alert("Soy " + this.nombre + " y voy a dominar el mundo con mi plan de " + this.plan);
+     }
+}
+
 //#region exercise 1
 function showPerson(){
      let name = document.getElementById("name").value;
@@ -51,6 +73,20 @@ function personalizatedPresentation(){
      let person = new Person(prompt("Ingrese su nombre"), prompt("Ingrese su edad"));
 
      person.saludar();
+}
+//#endregion
+
+//#region exercise 4
+function showSuperHero(){
+     let superHeroe = new SuperHero(prompt("Ingrese el nombre del super héroe"), prompt("Ingrese el poder del super héroe"));
+
+     superHeroe.mySelf();
+}
+
+function showVillian(){
+     let villian = new Villian(prompt("Ingrese el nombre del villano"), "", prompt("Ingrese el plan del villano"));
+
+     villian.threaten();
 }
 //#endregion
 
