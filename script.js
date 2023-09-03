@@ -21,6 +21,10 @@ class Book{
           this.year = year;
      }
 
+     showDigitals(){
+          alert(this.toString());
+     }
+
      toString(){
           return "Título: " + this.title + "\nAutor: " + this.author + "\nAño: " + this.year;
      }
@@ -44,7 +48,22 @@ class Villian extends SuperHero{
      }
 
      threaten(){
-          alert("Soy " + this.nombre + " y voy a dominar el mundo con mi plan de " + this.plan);
+          alert("Soy " + this.nombre + " y  mi plan es " + this.plan);
+     }
+}
+
+class DigitalBook extends Book{
+     constructor(title, author, year, format){
+          super(title, author, year);
+          this.format = format;
+     }
+
+     showformat(){
+          alert("Formato del libro: " + this.format);
+     }
+
+     toString(){
+          return super.toString() + "\nFormato: " + this.format;
      }
 }
 
@@ -90,3 +109,11 @@ function showVillian(){
 }
 //#endregion
 
+//#region exercise 5
+function showDigitalBook(){
+     let digitalBook = new DigitalBook(prompt("Ingrese el título del libro"), prompt("Ingrese el autor del libro"), prompt("Ingrese el año del libro"), prompt("Ingrese el formato del libro"));
+
+     digitalBook.showformat();
+     digitalBook.showDigitals();
+}
+//#endregion
