@@ -67,9 +67,11 @@ class DigitalBook extends Book{
      }
 }
 
+let names = [];
+
 //#region exercise 1
 function showPerson(){
-     let name = document.getElementById("name").value;
+     let name = document.getElementById("nameExercise1").value;
      let age = document.getElementById("age").value;
      let profession = document.getElementById("profession").value;
      
@@ -115,5 +117,36 @@ function showDigitalBook(){
 
      digitalBook.showformat();
      digitalBook.showDigitals();
+}
+//#endregion
+
+//#region exercise 6
+function addName(){
+     let name = document.getElementById("nameExercise6");
+
+     names.push(name.value.toUpperCase());
+
+     name.value = "";
+}
+
+function concatNames(){
+     let namesConcat = "";
+     for(let i = 0; i < names.length; i++){
+          namesConcat += names[i];
+     }
+     alert(namesConcat);
+}
+//#endregion
+
+//#region exercise 7
+function searchNumber(){
+     let array = [1, 2, 4, 5, 7, 9];
+     let number = parseInt(prompt("Ingrese un número para buscarlo en el arreglo"));
+
+     if(array.find(element => element == number)){
+          alert("El número " + number + " se encuentra en el arreglo");
+     }else{
+          alert("El número " + number + " no se encuentra en el arreglo");
+     }
 }
 //#endregion
