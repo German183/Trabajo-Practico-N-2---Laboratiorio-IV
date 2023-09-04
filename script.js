@@ -68,6 +68,7 @@ class DigitalBook extends Book{
 }
 
 let names = [];
+let numbers = [];
 
 //#region exercise 1
 function showPerson(){
@@ -148,5 +149,24 @@ function searchNumber(){
      }else{
           alert("El número " + number + " no se encuentra en el arreglo");
      }
+}
+//#endregion
+
+//#region exercise 8
+function addNumber(){
+     let number = document.getElementById("numberExercise8");
+
+     numbers.push(parseInt(number.value));
+
+     number.value = "";
+}
+
+function filterNumbers(){
+     let addednumber = document.getElementById("numberExercise8");
+     let filteredNumbers = numbers.filter(element => element % 2 == 0);
+     
+     alert(filteredNumbers);
+     
+     numbers = [];
 }
 //#endregion
